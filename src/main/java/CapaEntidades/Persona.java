@@ -6,7 +6,8 @@ package CapaEntidades;
 
 /**
  *
- * @author Asus
+ * @author Vanessa
+ *
  */
 public class Persona {
     protected String cedula;

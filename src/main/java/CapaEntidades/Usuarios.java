@@ -6,7 +6,7 @@ package CapaEntidades;
 
 /**
  *
- * @author Asus
+ * @author Vanessa
  */
 public class Usuarios extends Persona{
     private String numeroCuentaAhorros;
