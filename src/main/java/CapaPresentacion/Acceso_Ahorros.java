@@ -22,10 +22,13 @@ public class Acceso_Ahorros extends javax.swing.JFrame {
      * 2. CONSTRUCTOR: Modificado para recibir el servicio central en memoria.
      */
     public Acceso_Ahorros(BancoServicios bancoServicios) {
-        this.bancoServicios = bancoServicios;
-        initComponents();                 // Inicializa los componentes visuales de NetBeans
-        this.setLocationRelativeTo(null);
-        this.setTitle("ACCESO CUENTA AHORROS");
+      // PRUEBA DE DIAGNÓSTICO
+      java.net.URL test = getClass().getResource("/Imagenes/LOGO.png");
+      System.out.println("Ruta imagen: " + test);  // null = imagen no encontrada
+
+      this.bancoServicios = bancoServicios;
+      initComponents();
+      
     }
     // ... Aquí abajo NetBeans coloca el código generado automáticamente (Generated Code) ...
 
@@ -50,12 +53,12 @@ public class Acceso_Ahorros extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         btnVolver = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setMinimumSize(new java.awt.Dimension(1130, 85));
-        setPreferredSize(new java.awt.Dimension(1137, 787));
+        setMinimumSize(new java.awt.Dimension(1130, 850));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(1130, 420));
@@ -89,41 +92,20 @@ public class Acceso_Ahorros extends javax.swing.JFrame {
         jPanel3.add(btnInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 400, 287, 44));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setText("Correo Electrónico:");
+        jLabel4.setText("Usuario");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         jLabel5.setText("Contraseña:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         btnVolver.setText("Volver");
         btnVolver.addActionListener(this::btnVolverActionPerformed);
+        jPanel4.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 6, -1, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(btnVolver)))
-                .addContainerGap(214, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnVolver)
-                .addGap(175, 175, 175)
-                .addComponent(jLabel4)
-                .addGap(67, 67, 67)
-                .addComponent(jLabel5)
-                .addContainerGap(157, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 460));
 
@@ -158,8 +140,8 @@ public class Acceso_Ahorros extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -234,6 +216,7 @@ public class Acceso_Ahorros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

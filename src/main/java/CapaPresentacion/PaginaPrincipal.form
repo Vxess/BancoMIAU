@@ -74,7 +74,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -84,7 +84,7 @@
                       <Component id="jPanel7" max="32767" attributes="0"/>
                       <Component id="jPanel8" alignment="1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -99,19 +99,19 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/LOGO.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/LOGO.png"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="930" y="10" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="920" y="10" width="180" height="80"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/franja.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/franja.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
@@ -199,7 +199,7 @@
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/fondo.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/fondo.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel10"/>
               </Properties>
@@ -260,7 +260,7 @@
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/cta_ahorros.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/cta_ahorros.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -324,7 +324,7 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/cta_corriente.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/cta_corriente.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -388,7 +388,7 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/admin.png"/>
+                  <Image iconType="3" name="/CapaPresentacion/Imagenes/admin.png"/>
                 </Property>
               </Properties>
             </Component>

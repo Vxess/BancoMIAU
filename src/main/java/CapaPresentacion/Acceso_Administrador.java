@@ -17,8 +17,12 @@ public class Acceso_Administrador extends javax.swing.JFrame {
     private BancoServicios bancoServicios;
 
     public Acceso_Administrador(BancoServicios bancoServicios) {
-        this.bancoServicios = bancoServicios;
-        initComponents();
+      // PRUEBA DE DIAGNÓSTICO
+      java.net.URL test = getClass().getResource("/Imagenes/LOGO.png");
+      System.out.println("Ruta imagen: " + test);  // null = imagen no encontrada
+
+      this.bancoServicios = bancoServicios;
+      initComponents();
         this.setLocationRelativeTo(null); // Centra la ventana
         this.setTitle("ACCESO ADMINISTRACIÓN"); //
     }
@@ -54,6 +58,7 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         btnVolver = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -171,38 +176,20 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jPanel6.add(btnInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 400, 287, 44));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setText("Usuario:");
+        jPanel7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 204, -1, -1));
 
         jLabel13.setText("Contraseña:");
+        jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 287, -1, -1));
 
         btnVolver.setText("Volver");
         btnVolver.addActionListener(this::btnVolverActionPerformed);
+        jPanel7.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 6, -1, -1));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnVolver)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel13)
-                        .addComponent(jLabel12)))
-                .addContainerGap(256, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnVolver)
-                .addGap(175, 175, 175)
-                .addComponent(jLabel12)
-                .addGap(67, 67, 67)
-                .addComponent(jLabel13)
-                .addContainerGap(157, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 460));
 
@@ -237,8 +224,8 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -310,6 +297,7 @@ public class Acceso_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

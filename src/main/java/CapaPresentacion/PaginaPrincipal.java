@@ -16,11 +16,11 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     private BancoServicios bancoServicios; 
 
     
-    public PaginaPrincipal(BancoServicios bancoServicios) {
-        this.bancoServicios = bancoServicios; // guardamos la instancia activa
-        initComponents();                 // Inicializa los componentes de NetBeans
-        this.setLocationRelativeTo(null); // Centra la ventana en la pantalla
-    }
+   public PaginaPrincipal(BancoServicios bancoServicios) {
+    System.out.println("TEST IMAGEN: " + getClass().getResource("/Imagenes/LOGO.png"));
+    this.bancoServicios = bancoServicios;
+    initComponents();
+}
    
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,7 +61,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 10, -1, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 10, 180, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/franja.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -239,7 +239,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -257,21 +257,26 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAccederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederAdminActionPerformed
-        PaginaPrincipal vistaAdmin = new PaginaPrincipal(this.bancoServicios);
+        Acceso_Administrador vistaAdmin = new Acceso_Administrador(this.bancoServicios);
         vistaAdmin.setVisible(true);
         this.dispose(); // Cerrar el menú principal
     }//GEN-LAST:event_btnAccederAdminActionPerformed
 
     private void btnAccederCorrienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederCorrienteActionPerformed
-        PaginaPrincipal vistaCorriente = new PaginaPrincipal(this.bancoServicios);
+        Acceso_Corriente vistaCorriente = new Acceso_Corriente(this.bancoServicios);
         vistaCorriente.setVisible(true);
-        this.dispose(); // Cerrar el menú principal
+        this.dispose();
     }//GEN-LAST:event_btnAccederCorrienteActionPerformed
 
     private void btnAccederAhorrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederAhorrosActionPerformed
-    PaginaPrincipal vistaAhorros = new PaginaPrincipal(this.bancoServicios);
-    vistaAhorros.setVisible(true);
-    this.dispose(); // Cerrar el menú principal
+        try {
+            Acceso_Ahorros vistaAhorros = new Acceso_Ahorros(this.bancoServicios);
+            vistaAhorros.setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+            javax.swing.JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+        }
     }//GEN-LAST:event_btnAccederAhorrosActionPerformed
 
     /*
