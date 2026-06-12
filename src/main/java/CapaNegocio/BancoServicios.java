@@ -6,7 +6,7 @@ package CapaNegocio;
 
 import CapaEntidades.Administrador;
 import CapaEntidades.ListaDoble;
-import CapaEntidades.Usuarios;
+import CapaEntidades.Cliente;
 
 /**
  *
@@ -39,7 +39,7 @@ public class BancoServicios {
         String numAhorros = "AHO-" + (int)(Math.random() * 900000 + 100000);
         String numCorriente = "COR-" + (int)(Math.random() * 900000 + 100000);
 
-        Usuarios nuevo = new Usuarios(cedula, nombre, apellido, correo, telefono, edad, usuario, password, numAhorros, numCorriente);
+        Cliente nuevo = new Cliente(cedula, nombre, apellido, correo, telefono, edad, usuario, password, numAhorros, numCorriente);
         listaClientes.insertarAlFinal(nuevo);
     }
 
@@ -51,7 +51,7 @@ public class BancoServicios {
         }
         
         // 2. Validar si es Cliente
-        Usuarios cliente = listaClientes.buscarPorUsuario(usuario);
+        Cliente cliente = listaClientes.buscarPorUsuario(usuario);
         if (cliente != null && cliente.getContraseña().equals(password)) {
             return "CLIENTE";
         }
@@ -59,7 +59,7 @@ public class BancoServicios {
         throw new Exception("Error: Credenciales incorrectas o usuario inexistente.");
     }
 
-    public Usuarios obtenerCliente(String usuario) {
+    public Cliente obtenerCliente(String usuario) {
         return listaClientes.buscarPorUsuario(usuario);
     }
 

@@ -5,9 +5,16 @@
     <artifactId>AppBancoMIAU</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE300</version>
+        </dependency>
+    </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>26</maven.compiler.release>
-        <exec.mainClass>com.mycompany.appbancomiau.AppBancoMIAU</exec.mainClass>
+        <exec.mainClass>BancoMIAU.BancoMIAU</exec.mainClass>
     </properties>
 </project>

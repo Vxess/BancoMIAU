@@ -12,7 +12,7 @@ public class ListaDoble {
     private Nodo inicio;
     private Nodo fin;
 
-    public void insertarAlFinal(Usuarios nuevoCliente) {
+    public void insertarAlFinal(Cliente nuevoCliente) {
         Nodo nuevoIngreso = new Nodo(nuevoCliente);
         if (inicio == null) {
             inicio = nuevoIngreso;
@@ -24,7 +24,7 @@ public class ListaDoble {
         }
     }
 
-    public Usuarios buscarPorUsuario(String usuario) {
+    public Cliente buscarPorUsuario(String usuario) {
         Nodo actual = inicio;
         while (actual != null) {
             if (actual.getUsuarios().getUsuario().equalsIgnoreCase(usuario)) {

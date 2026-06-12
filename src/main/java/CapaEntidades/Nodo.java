@@ -9,23 +9,23 @@ package CapaEntidades;
  * @author Vanessa
  */
 public class Nodo {
-    private Usuarios usuarios;
+    private Cliente usuarios;
     public Nodo siguiente;
     public Nodo anterior;
 
     //constructor
-    public Nodo(Usuarios usuarios) {
+    public Nodo(Cliente usuarios) {
         this.usuarios = usuarios;
         this.siguiente = null;
         this.anterior = null;
     }
 
     // getter y setter
-    public Usuarios getUsuarios() {
+    public Cliente getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(Usuarios usuarios) {
+    public void setUsuarios(Cliente usuarios) {
         this.usuarios = usuarios;
     }
     
