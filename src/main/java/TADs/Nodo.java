@@ -2,32 +2,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package CapaEntidades;
+package TADs;
+
 
 /**
  *
  * @author Vanessa
  */
+
 public class Nodo {
-    private Cliente usuarios;
+    //Se instancia un Objeto para que se use para Clientes, Cheques o cualquier TAD
+    private Object dato; 
     public Nodo siguiente;
     public Nodo anterior;
 
-    //constructor
-    public Nodo(Cliente usuarios) {
-        this.usuarios = usuarios;
+    // Constructor
+    public Nodo(Object dato) {
+        this.dato = dato;
         this.siguiente = null;
         this.anterior = null;
     }
 
-    // getter y setter
-    public Cliente getUsuarios() {
-        return usuarios;
+    // Getters y Setters universales
+    public Object getDato() {
+        return dato;
     }
 
-    public void setUsuarios(Cliente usuarios) {
-        this.usuarios = usuarios;
+    public void setDato(Object dato) {
+        this.dato = dato;
     }
-    
-    
 }

@@ -33,7 +33,7 @@ public class BancoMIAU {
 
         // 2. CONEXIÓN LÓGICA: Instancia única del servicio en memoria
         BancoServicios bancoServicios = new BancoServicios();
-        
+        bancoServicios.precargarClientesPrueba();
         // 3. CONEXIÓN DE INTERFAZ: Se pasa por parámetro al constructor corregido
         PaginaPrincipal pantallaInicio = new PaginaPrincipal(bancoServicios);
         

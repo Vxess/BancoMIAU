@@ -53,5 +53,10 @@ public class Persona {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
- 
+    
+    // Comparación de la contraseña ingresada contra la almacenada
+    public boolean validarPassword(String pass) {
+        return this.contraseña != null && this.contraseña.equals(pass);
+    }
 }
+ 

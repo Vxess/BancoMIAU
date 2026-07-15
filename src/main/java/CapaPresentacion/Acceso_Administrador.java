@@ -51,14 +51,14 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
-        txtUsuario = new javax.swing.JTextField();
-        btnInicioSesion = new javax.swing.JButton();
+        txtUsuarioAdmin = new javax.swing.JTextField();
+        btnIniciarSesionAdmin = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        btnVolver = new javax.swing.JButton();
+        btnVolverAdmin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        txtPasswordAdmin = new javax.swing.JPasswordField();
         jPanel8 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -152,7 +152,7 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1137, 787));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel6.setBackground(new java.awt.Color(153, 0, 0));
+        jPanel6.setBackground(new java.awt.Color(243, 184, 142));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
@@ -162,18 +162,15 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
         jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 27, -1, -1));
 
-        txtPassword.addActionListener(this::txtPasswordActionPerformed);
-        jPanel6.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 331, 287, 40));
+        txtUsuarioAdmin.addActionListener(this::txtUsuarioAdminActionPerformed);
+        jPanel6.add(txtUsuarioAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 251, 287, 40));
 
-        txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
-        jPanel6.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 251, 287, 40));
-
-        btnInicioSesion.setBackground(new java.awt.Color(0, 0, 102));
-        btnInicioSesion.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        btnInicioSesion.setForeground(new java.awt.Color(255, 255, 255));
-        btnInicioSesion.setText("Iniciar Sesión");
-        btnInicioSesion.addActionListener(this::btnInicioSesionActionPerformed);
-        jPanel6.add(btnInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 400, 287, 44));
+        btnIniciarSesionAdmin.setBackground(new java.awt.Color(0, 102, 102));
+        btnIniciarSesionAdmin.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        btnIniciarSesionAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        btnIniciarSesionAdmin.setText("Iniciar Sesión");
+        btnIniciarSesionAdmin.addActionListener(this::btnIniciarSesionAdminActionPerformed);
+        jPanel6.add(btnIniciarSesionAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 400, 287, 44));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -184,18 +181,18 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         jLabel13.setText("Contraseña:");
         jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 287, -1, -1));
 
-        btnVolver.setText("Volver");
-        btnVolver.addActionListener(this::btnVolverActionPerformed);
-        jPanel7.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 6, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
-        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        btnVolverAdmin.setText("Volver");
+        btnVolverAdmin.addActionListener(this::btnVolverAdminActionPerformed);
+        jPanel7.add(btnVolverAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 6, -1, -1));
+        
+        txtPasswordAdmin.addActionListener(this::txtPasswordAdminActionPerformed);
+        jPanel7.add(txtPasswordAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 280, 40));
 
         jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 460));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 380, 500));
 
-        jPanel8.setBackground(new java.awt.Color(153, 0, 0));
+        jPanel8.setBackground(new java.awt.Color(243, 184, 142));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Semibold", 3, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -228,9 +225,7 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,49 +243,38 @@ public class Acceso_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+    private void txtUsuarioAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioAdminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordActionPerformed
+    }//GEN-LAST:event_txtUsuarioAdminActionPerformed
 
-    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuarioActionPerformed
-
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        PaginaPrincipal menu = new PaginaPrincipal(this.bancoServicios);
-        menu.setVisible(true);
+    private void btnVolverAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAdminActionPerformed
+        PaginaPrincipal principal = new PaginaPrincipal(bancoServicios);
+        principal.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnVolverActionPerformed
+    }//GEN-LAST:event_btnVolverAdminActionPerformed
 
-    private void btnInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioSesionActionPerformed
-       String user = txtUsuario.getText();
-       String pass = txtPassword.getText();
+    private void btnIniciarSesionAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionAdminActionPerformed
+        String user = txtUsuarioAdmin.getText();
+        String pass = new String(txtPasswordAdmin.getPassword());
 
-       try {
-           // Llama al método de autenticación
-           String rolEncontrado = bancoServicios.autenticarUsuario(user, pass);
-
-           // Verificamos que el rol sea ADMIN y que la ventana efectivamente sea de ADMIN
-           if (rolEncontrado.equals("ADMIN") && this.getTitle().contains("ADMIN")) {
-               JOptionPane.showMessageDialog(this, "¡Ingresado con éxito!");
-
-               // NOTA: Descomenta estas líneas en la semana 4 al crear el Dashboard de Admin
-               // FrmDashboardAdmin dashboardAdmin = new FrmDashboardAdmin(bancoServicios);
-               // dashboardAdmin.setVisible(true);
-               // this.dispose();
-           } else {
-               JOptionPane.showMessageDialog(this, "Error: Credenciales no corresponden a un Administrador.");
-           }
-
-       }    catch (Exception ex) {
-            System.getLogger(Acceso_Administrador.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        if (bancoServicios.login(user, pass)) {
+            // Le pasamos la lógica compartida y el nombre del admin
+            Area_Admin areaAdmin = new Area_Admin(bancoServicios, user);
+            areaAdmin.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Credenciales de Administrador incorrectas.");
         }
-    }//GEN-LAST:event_btnInicioSesionActionPerformed
+    }//GEN-LAST:event_btnIniciarSesionAdminActionPerformed
+
+    private void txtPasswordAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordAdminActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnInicioSesion;
-    private javax.swing.JButton btnVolver;
+    private javax.swing.JButton btnIniciarSesionAdmin;
+    private javax.swing.JButton btnVolverAdmin;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -314,7 +298,7 @@ public class Acceso_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtUsuario;
+    private javax.swing.JPasswordField txtPasswordAdmin;
+    private javax.swing.JTextField txtUsuarioAdmin;
     // End of variables declaration//GEN-END:variables
 }
